@@ -1,1 +1,58 @@
-Write a program named greeter.js that greets 'Victor' three times. Your program should use a variable and not hard code the string value 'Victor' in each greeting. Here's an example run of the program:
+1. Write a program named greeter.js that greets 'Victor' three times. Your program should use a variable and not hard code the string value 'Victor' in each greeting. Here's an example run of the program:
+const GREETING = ['Good Morning', 'Good Afternoon', 'Good Evening'];
+const USER  = 'Victor';
+for (let i = 0; i < greeting.length; i++){
+  console.log(`${greeting[i]}, ${user}!` );
+}
+
+2. Write a program that includes someone's age and then calculates and reports the future age in 10, 20, 30 and 40 years. Below is the output for someone 20 years old.
+let age = 20;
+console.log(`You are ${age} years old.`);
+console.log(`In 10 years, you will be ${age + 10} years old.`);
+console.log(`In 20 years, you will be ${age + 20} years old.`);
+console.log(`In 30 years, you will be ${age + 30} years old.`);
+console.log(`In 40 years, you will be ${age + 40} years old.`);
+
+3. What happens when you run the following program? Why do we get that result?
+{
+  let foo = 'bar';
+}
+console.log(foo);
+//There is an error because of scope.
+
+4. What happens when you run the following code? Why?
+const NAME = 'Victor';
+console.log('Good Morning, ' + NAME);
+console.log('Good Afternoon, ' + NAME);
+console.log('Good Evening, ' + NAME);
+
+NAME = 'Joe';
+console.log('Good Morning, ' + NAME);
+console.log('Good Afternoon, ' + NAME);
+console.log('Good Evening, ' + NAME);
+
+You cannot rename the varible beause it was declared with const
+
+5. What is logged to the console?
+let foo = 'bar';
+{
+  let foo = 'qux';
+}
+console.log(foo);
+//because of global scope 'bar' is logged to the console. 
+
+6. Will this program produce an error when run? Why or why not?
+const FOO = 'bar';
+{
+  const FOO = 'qux';
+}
+console.log(FOO);
+// This will return 'bar' because of global scope and matching case.
+
+
+
+
+
+
+
+
