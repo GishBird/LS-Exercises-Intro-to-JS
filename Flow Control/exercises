@@ -1,4 +1,4 @@
-What values do the following expressions evaluate to?
+1. What values do the following expressions evaluate to?
 false || (true && false); FALSE
 true || (1 + 2);  TRUE
 (1 + 2) || true;  TRUE
@@ -11,3 +11,84 @@ true === 4; FALSE
 false === (847 === '847'); TRUE
 false === (847 == '847'); FALSE
 (!true || (!(100 / 5) === 20) || ((328 / 4) === 82)) || false;
+
+2. Write a function, evenOrOdd, that determines whether its argument is an even number. 
+If it is, the function should log 'even' to the console; otherwise, it should log 'odd'. 
+For now, assume that the argument is always an integer.
+/*
+const oddOrEven=(num)=>{
+  if(num % 2 === 0){
+    console.log("number is even")
+  } else {
+    console.log("number is odd")
+  };
+}
+*/
+
+3. Let's improve our previous implementation of evenOrOdd. 
+Add a validation check to ensure that the argument is an integer. 
+If it isn't, the function should issue an error message and return.
+
+4. What does the following code log to the console, and why?
+function barCodeScanner(serial) {
+  switch (serial) {
+    case '123':
+      console.log('Product1');
+    case '113':
+      console.log('Product2');
+    case '142':
+      console.log('Product3');
+    default:
+      console.log('Product not found!');
+  }
+}
+
+barCodeScanner('113');
+"Product 2"
+"Product 3"
+"Product not found!"
+because of a missing 'break' 
+
+5. Refactor this statement to use an if statement instead.
+return foo() ? 'bar' : qux();
+if (foo()){ 
+return'bar'
+}else{ 
+  return qux() 
+}
+
+6.  What does this code output to the console?
+function isArrayEmpty(arr) {
+  if (arr) {
+    console.log('Not Empty');
+  } else {
+    console.log('Empty');
+  }
+}
+
+isArrayEmpty([]);
+"Not Empty" 
+an empty array is not zero or any of the other qualifying falsy values 
+
+7. Write a function that takes a string as an argument and returns an all-caps version of the string when the string is longer than 10 characters. 
+Otherwise, it should return the original string. Example: change 'hello world' to 'HELLO WORLD', but don't change 'goodbye'.
+const string = (phrase) =>{
+  if(phrase.length >= 10){
+    console.log(phrase.toUpperCase());
+  } else {
+    console.log(phrase);
+  }
+}
+
+8. Write a function that logs whether a number is between 0 and 50 (inclusive), between 51 and 100 (inclusive), greater than 100, or less than 0.
+const numberCheck =(num)=>{
+  if(num >=0 && num <=50){
+    console.log(`${num} is between 0 and 50`)
+  } if(num >=51 && num <= 100){
+    console.log(`${num} is between 51 and 100`)
+  } if (num > 100){
+    console.log(`${num} is greater than 100`)
+  } if(num < 0){
+    console.log(`${num} is less than 0`)
+  };
+}
